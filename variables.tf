@@ -21,3 +21,7 @@ variable "volume_size" {
 variable "public_key_path" {
   default = "./kabkey.pub"
 }
+
+variable "aws_region" {
+  default = "us-east-1"
+}
