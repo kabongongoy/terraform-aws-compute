@@ -18,9 +18,9 @@ variable "volume_size" {
   default = 10
 }
 
-variable "public_key_path" {
-  default = "./kabkey.pub"
-}
+# variable "public_key_path" {
+#   default = "./kabkey.pub"
+# }
 
 variable "aws_region" {
   default = "us-east-1"
@@ -29,3 +29,8 @@ variable "public_sg" {}
 
 
 variable "public_subnets" {}
+
+variable "public_key" {
+  default = "kabkey.pub"
+
+}

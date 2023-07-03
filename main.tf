@@ -24,7 +24,8 @@ data "aws_ami" "ec2-ami" {
 
 resource "aws_key_pair" "kab-ec2-key" {
   key_name   = var.key_name
-  public_key = file(var.public_key_path)
+  #public_key = file(var.public_key_path)
+  public_key = var.public_key
 }
  
 
