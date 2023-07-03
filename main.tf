@@ -34,6 +34,8 @@ resource "aws_instance" "kab-node" {
   ami                    = data.aws_ami.ec2-ami.id
   instance_type          = var.instance_type # "t3.micro"
   key_name               = aws_key_pair.kab-ec2-key.id
+  vpc_security_group_ids = [var.public_sg]
+  subnet_id              = var.public_subnets[count.index]  
 
   root_block_device {
     volume_size = var.volume_size # 10
