@@ -25,3 +25,7 @@ variable "public_key_path" {
 variable "aws_region" {
   default = "us-east-1"
 }
+variable "public_sg" {}
+
+
+variable "public_subnets" {}
